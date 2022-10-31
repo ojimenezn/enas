@@ -31,7 +31,8 @@ if __name__ == "__main__":
     filename = 'hyperparam_config.yaml'
     with open(filename, 'r') as f:
         try:
-            hyperparam_document = yaml.load(f)
+            #hyperparam_document = yaml.load(f)
+            hyperaparam_document = yaml.safe_load(f)
         except yaml.YAMLError as e:
             raise RuntimeError("Error parsing file %s: %s" % (filename, e))
 
